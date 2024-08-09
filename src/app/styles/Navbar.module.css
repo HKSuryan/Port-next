@@ -11,17 +11,22 @@
   box-shadow: 0 4px 6px rgb(43, 40, 40);
   box-sizing: border-box;
   z-index: 1000;
- 
+  flex:1 1 50%;
+  white-space: nowrap;
+  
   
   
   
 } 
+.navbar label:nth-child(2) {  /*label with input type="number"*/
+  flex:0 0 10%;
+}
 
 .gap{
-  margin-right: 50px;
+  margin-right: 90px;
   
   display: flex;
-  
+
 
 }
 .menuClosed{
@@ -30,7 +35,7 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  
+  width:5em;
 
 }
 
@@ -48,6 +53,7 @@
   color: var(--text-dark);
   transition: color 0.3s ease;
   z-index: 1000;
+  white-space:nowrap;
 }
 
 .darkModeToggle:hover {
@@ -117,8 +123,11 @@
 
 .menuItem {
   display: flex;
-  font-size: 20px;
+  font-size: 22px;
   cursor: pointer;
+  flex:1 1 auto;
+  white-space:nowrap;
+  
 }
 
 .menuItemMobile {
