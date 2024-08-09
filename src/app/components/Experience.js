@@ -2,22 +2,22 @@ import styles from '../styles/Experience.module.css';
 
 const experiencesData = [
   {
-    title: 'Software Engineer',
-    company: 'Tech Company A',
-    duration: 'Jan 2020 - Present',
-    description: 'Developed and maintained web applications using React and Node.js. Worked on improving the performance and scalability of existing systems.',
+    title: 'Web Developer Intern',
+    company: 'IIT Academy',
+    duration: 'May 2024 - Jul 2024',
+    description: 'Designed and developed a fully responsive web application from scratch using the MERN stack (MongoDB, Express.js, React, Node.js). Implemented dynamic and interactive tables using React-tables. Utilized Tailwind CSS for rapid and flexible styling, ensuring a modern and user-friendly interface.',
   },
   {
-    title: 'Frontend Developer',
-    company: 'Creative Agency B',
-    duration: 'Jun 2018 - Dec 2019',
-    description: 'Designed and implemented responsive user interfaces for various clients using HTML, CSS, and JavaScript. Collaborated closely with designers and backend developers.',
+    title: 'Trainee',
+    company: 'Brain Mentors',
+    duration: 'Jul 2023 - Aug 2023',
+    description: 'Completed intensive training in MERN (MongoDB, Express.js, React, Node.js) stack, Applied acquired skills to successfully complete a project. Demonstrating practical understanding of web development principles and hands-on experience in creating dynamic, responsive applications.',
   },
   {
-    title: 'Junior Developer',
-    company: 'Startup C',
-    duration: 'Jul 2016 - May 2018',
-    description: 'Assisted in the development of a new e-commerce platform, focusing on frontend components and user experience enhancements.',
+    title: 'Intern',
+    company: 'Edunet Foundation',
+    duration: 'Jun 2023 - Jul 2023',
+    description: 'Interned in Artificial Intelligence using IBM SkillsBuild under AICTE. Gaining practical experience in applying AI concepts and technologies.',
   },
   // Add more experiences as needed
 ];

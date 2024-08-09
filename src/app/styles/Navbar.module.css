@@ -18,6 +18,7 @@
   
   
 } 
+
 .navbar label:nth-child(2) {  /*label with input type="number"*/
   flex:0 0 10%;
 }
@@ -49,7 +50,7 @@
   display: flex;
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 20px;
   color: var(--text-dark);
   transition: color 0.3s ease;
   z-index: 1000;
