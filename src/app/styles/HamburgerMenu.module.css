@@ -1,0 +1,40 @@
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburgerLine {
+  width: 25px;
+  height: 3px;
+  background-color: var(--black);
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.hamburgerOpen1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburgerOpen2 {
+  opacity: 0;
+}
+
+.hamburgerOpen3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show hamburger menu */
+  }
+
+}
+@media (min-width: 769px) {
+  .hamburger {
+    display: none; /* Show hamburger menu */
+  }
+
+}
+.darkMode .hamburgerLine{
+  background-color: var(--text-light);
+}

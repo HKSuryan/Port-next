@@ -1,0 +1,108 @@
+.experienceSection {
+    padding: 60px 20px;
+    /* background-color: var(--white); */
+    z-index:1;
+  }
+  
+  .sectionTitle {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-dark);
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--primary);
+    transform: translateX(-50%);
+  }
+  
+  .timelineItem {
+    position: relative;
+    padding: 20px 40px;
+    width: 50%;
+  }
+  
+  .timelineItem:nth-child(odd) {
+    left: 0;
+  }
+  
+  .timelineItem:nth-child(even) {
+    left: 50%;
+  }
+  
+  .timelineItem::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -8px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--primary);
+    border-radius: 50%;
+  }
+  
+  .timelineContent {
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .experienceTitle {
+    font-size: 24px;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+  }
+  
+  .experienceCompany {
+    font-size: 18px;
+    color: var(--primary);
+    margin-bottom: 5px;
+  }
+  
+  .experienceDuration {
+    font-size: 16px;
+    color: var(--text-gray);
+    margin-bottom: 10px;
+  }
+  
+  .experienceDescription {
+    font-size: 16px;
+    color: var(--text-gray);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .timeline::before {
+      left: 20px;
+    }
+  
+    .timelineItem {
+      width: 100%;
+      padding-left: 60px;
+      padding-right: 20px;
+      margin-bottom: 40px;
+    }
+  
+    .timelineItem:nth-child(even) {
+      left: 0;
+    }
+  
+    .timelineItem::before {
+      left: 0;
+    }
+  }
+  

@@ -1,0 +1,15 @@
+.sectionWrapper {
+    padding: 60px 20px;
+    background-color: var(--background);
+  }
+  
+  .title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .content {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  

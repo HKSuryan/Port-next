@@ -1,0 +1,63 @@
+.skillsSection {
+    padding: 60px 20px;
+/* Background color matching the theme */
+    color: var(--primary-dark);
+    
+
+      /* background-color: var(--white);  */
+    
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sectionTitle {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--primary-dark);
+  }
+  
+  .subtitle {
+    font-size: 18px;
+    color: var(--text-gray); /* Text color matching the theme */
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+  
+  .skillsContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .skillCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .skillImage {
+    width: 80px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .skillName {
+    font-size: 20px;
+    color: var(--primary-dark);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .skillCard {
+      margin: 15px;
+    }
+  }
+  
