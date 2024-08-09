@@ -1,6 +1,6 @@
 .experienceSection {
     padding: 60px 20px;
-    /* background-color: var(--white); */
+    background-color: var(--bg-home);
     z-index:1;
   }
   
@@ -55,7 +55,7 @@
   }
   
   .timelineContent {
-    background-color: var(--light-gray);
+    background-color: var(--bg-about);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

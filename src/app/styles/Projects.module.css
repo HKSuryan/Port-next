@@ -1,11 +1,12 @@
 .projectsSection {
-    padding: 60px 20px;
+    padding: 80px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   
 
-    /* background-color: var(--background-light); */
+    background-color: var(--bg-about);
   }
   
   .sectionTitle {
@@ -17,15 +18,18 @@
   
   .projectsGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    padding: 25px;
+    gap: 30px;
+    margin:10px;
     justify-items: center;
   }
   
   .projectCard {
-    background-color: var(--white);
+    background-color: var(--bg-home);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--project-shadow);
+    box-shadow: 0 4px 8px var(--project-shadow);
     overflow: hidden;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
@@ -49,6 +53,7 @@
   .projectContent {
     padding: 20px;
     text-align: center;
+    border-top: 1px solid var(--project-shadow);
   }
   
   .projectTitle {
@@ -59,7 +64,7 @@
   
   .projectDescription {
     font-size: 16px;
-    color: var(--text-gray);
+    color: var(--about-text);
     margin-bottom: 20px;
   }
   

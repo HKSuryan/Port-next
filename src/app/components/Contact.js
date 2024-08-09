@@ -8,6 +8,7 @@ const Contact = () => {
         <p className={styles.subtitle}>
           I’m always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
         </p>
+        <div className={styles.separ}>
         <div className={styles.contactContent}>
           <div className={styles.contactInfo}>
             <h3 className={styles.infoTitle}>Contact Information</h3>
@@ -18,15 +19,15 @@ const Contact = () => {
           <div className={styles.socialLinks}>
             <h3 className={styles.socialTitle}>Connect with Me</h3>
             <div className={styles.socialIcons}>
-              <a href="https://github.com/HKSuryan" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-                <img src="github.svg" alt="GitHub" className={styles.socialIcon} />
+              <a href="https://github.com/HKSuryan" target="_blank" rel="noopener noreferrer" className={`${styles.socialLink}`}>
+                <img src="github-mark-white.png" alt="GitHub"  className={`${styles.socialIcon} ${styles.git}`}/>
               </a>
               <a href="https://www.linkedin.com/in/harsh-kumar-suryan-a9311a228/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-                <img src="linkedin.svg" alt="LinkedIn" className={styles.socialIcon} />
+                <img src="linkedin.png" alt="LinkedIn" className={styles.socialIcon} />
               </a>
               <a href="https://x.com/HKSuryan" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-                <img src="twitter.svg" alt="Twitter" className={styles.socialIcon} />
-              </a>
+                <img src="x.png" alt="Twitter" id="x" className={`${styles.socialIcon} ${styles.x}`} />
+              </a></div>
             
             </div>
           </div>

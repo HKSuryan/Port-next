@@ -1,6 +1,6 @@
 .footerSection {
     padding: 40px 20px;
-    /* background-color: var(--white); */
+    background-color: var(--bg-home);
     color: var(--text-dark);
     text-align: center;
     border-top: 1px solid var(--border-color);
@@ -8,7 +8,7 @@
   }
   
   [data-theme='dark'] .footerSection {
-    background-color: var(--background-dark);
+    background-color: var(--bg-home);
     color: var(--text-light);
     border-top: 1px solid var(--border-dark-color); /* Define border color for dark mode */
   }

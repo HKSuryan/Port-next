@@ -1,6 +1,6 @@
 .contactSection {
   padding: 60px 20px;
-  /* background-color: var(--background-light); Background color matching the theme */
+  background-color: var(--bg-about); 
   color: var(--primary-dark);
 }
 
@@ -46,7 +46,7 @@
 
 .infoItem {
   font-size: 18px;
-  color: var(--primary-dark);
+  color: var(--about-text);
   margin-bottom: 10px;
 }
 
@@ -64,7 +64,10 @@
 .socialIcons {
   display: flex;
   gap: 20px;
+  
 }
+
+
 
 .socialLink {
   display: inline-block;
@@ -78,8 +81,14 @@
 .socialIcon {
   width: 40px;
   height: 40px;
+  
 }
-
+.git{
+  background-color: black;
+}
+.x{
+  background-color: white;
+}
 /* Media Queries */
 @media (max-width: 768px) {
   .contactContent {

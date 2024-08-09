@@ -4,7 +4,7 @@
     color: var(--primary-dark);
     
 
-      /* background-color: var(--white);  */
+      background-color: var(--bg-home); 
     
   }
   
@@ -24,7 +24,7 @@
   
   .subtitle {
     font-size: 18px;
-    color: var(--text-gray); /* Text color matching the theme */
+    color: var(--text-gray); 
     line-height: 1.6;
     margin-bottom: 40px;
   }
@@ -44,7 +44,7 @@
   }
   
   .skillImage {
-    width: 80px; /* Adjust size as needed */
+    width: 80px;
     height: auto;
     margin-bottom: 10px;
   }
@@ -54,7 +54,6 @@
     color: var(--primary-dark);
   }
   
-  /* Media Queries */
   @media (max-width: 768px) {
     .skillCard {
       margin: 15px;

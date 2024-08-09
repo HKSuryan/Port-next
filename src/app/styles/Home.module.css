@@ -11,8 +11,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: var(--white); */
-  color: var(--text-dark);
+  background-color: var(--bg-home);
+  color: var(--text-home);
   padding: 60px 20px;
 }
 
@@ -41,11 +41,11 @@
 .roleText {
   font-size: 28px;
   margin: 20px 0;
-  color: var(--text-dark);
+  color: var(--text-home);
 }
 
 .dynamicText {
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.9s ease-in-out;
   animation: fadeInOut 2s ease-in-out infinite;
 }
 
@@ -63,27 +63,30 @@
 
 .primaryButton {
   padding: 15px 30px;
-  background-color: var(--primary-color);
-  color: var(--text-light);
+  background-color: transparent;
+  color: var(--text-home);
   text-decoration: none;
   border-radius: 5px;
   box-shadow: 0 4px 10px rgba(0, 112, 243, 0.3);
   transition: background-color 0.3s ease, transform 0.3s ease;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
 }
 
 .primaryButton:hover {
-  background-color: #005bb5;
+  background-color: var(--primary-color);
+  color: var(--white);
   transform: translateY(-3px);
 }
 
 .secondaryButton {
   padding: 15px 30px;
   background-color: transparent;
-  color: var(--text-dark);
+  color: var(--text-home);
   text-decoration: none;
   border: 2px solid var(--secondary-color);
   border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.4s ease, color 0.4s ease, transform 0.4s ease;
 }
 
 .secondaryButton:hover {

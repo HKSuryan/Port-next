@@ -1,6 +1,6 @@
 .aboutSection {
     padding: 60px 20px;
-    /* background-color: var(--background-light); */
+    background-color: var(--bg-about);
   }
   
   .container {
@@ -46,7 +46,7 @@
   
   .aboutText {
     font-size: 18px;
-    color: var(--text-gray);
+    color: var(--about-text);
     line-height: 1.6;
     margin-bottom: 20px;
   }
