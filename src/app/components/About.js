@@ -11,7 +11,7 @@ const About = () => {
           </div>
           <div className={styles.textWrapper}>
             <p className={styles.aboutText}>
-              Hi, I'm Harsh Kumar Suryan, a passionate software developer with a strong background in software development, with experience in both front-end and back-end technologies.
+              Hi, I'm Harsh Kumar Suryan, a passionate fellow with a strong background in software development, with experience in both front-end and back-end technologies.
               I have a deep love for creating intuitive and responsive web applications. 
                I enjoy solving complex problems and am always 
               eager to learn new technologies and improve my skills.
