@@ -6,7 +6,7 @@ const Contact = () => {
       <div className={styles.container}>
         <h2 className={styles.sectionTitle}>Get in Touch</h2>
         <p className={styles.subtitle}>
-          I’m always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+          I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
         </p>
         <div className={styles.separ}>
         <div className={styles.contactContent}>
