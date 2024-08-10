@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css';
 
 const Home = () => {
   const [textIndex, setTextIndex] = useState(0);
-  const rotatingText = ['Full-Stack Developer', 'Problem Solver', 'Tech Enthusiast', 'Open Source Contributor'];
+  const rotatingText = ['Full-Stack Developer', 'Problem Solver', 'Tech Enthusiast', 'Open Source Contributor','Chess Player'];
 
   useEffect(() => {
     const intervalId = setInterval(() => {

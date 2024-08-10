@@ -8,11 +8,13 @@ import Home from './components/Home';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
 
+
 export default function HomePage() {
   return (
     <>
       
       <AnimationWrapper>
+        
 
          <Home/>
          <About/>
