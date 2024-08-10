@@ -11,13 +11,13 @@ const About = () => {
           </div>
           <div className={styles.textWrapper}>
             <p className={styles.aboutText}>
-              Hi, I&aposm Harsh Kumar Suryan, a passionate fellow with a strong background in software development, with experience in both front-end and back-end technologies.
+              Hi&lsquo I&aposm Harsh Kumar Suryan&lsquo a passionate fellow with a strong background in software development&lsquo with experience in both front-end and back-end technologies.
               I have a deep love for creating intuitive and responsive web applications. 
                I enjoy solving complex problems and am always 
               eager to learn new technologies and improve my skills.
             </p>
             <p className={styles.aboutText}>
-              When I&aposm not coding, you&aposll find me making smoothies or challenging friends to a game of chess. I&aposm always open to exciting new opportunities, 
+              When I&aposm not coding&lsquo you&aposll find me making smoothies or challenging friends to a game of chess. I&aposm always open to exciting new opportunities&lsquo 
               so feel free to get in touch if you&aposd like to work together.
             </p>
           </div>
