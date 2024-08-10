@@ -4,14 +4,14 @@ const projectsData = [
 
   {
     title:"Tetris",
-    description:"Built with Pygame using Python. Created the game's look, how it works, and how players interact with it. Learned problem-solving and attention to detail.",
+    description:"Built with Pygame using Python. Created the game&aposs look, how it works, and how players interact with it. Learned problem-solving and attention to detail.",
     projectLink:"https://github.com/HKSuryan/Tetris",
     imageUrl:'proimages/tetris.png',
     techStack:"Python, Pygame"
 },
 {
     title:"Pacman",
-    description:"Crafted a Pac-Man game in Python, spicing it up with awesome sprites. Deployed Pygame's magic for handling graphics and movements.",
+    description:"Crafted a Pac-Man game in Python, spicing it up with awesome sprites. Deployed Pygame&aposs magic for handling graphics and movements.",
     projectLink:"https://github.com/HKSuryan/Pacman",
     imageUrl:'proimages/res.png',
     techStack:"Python, Pygame, Sprites"
@@ -19,7 +19,7 @@ const projectsData = [
 ,
 {
     title:"Notice",
-    description:"Check out 'NoticeBot' a cool Telegram buddy I made with Python. It's like a superhero that fetches the latest updates from our college website. I used web scraping tricks and the power of libraries like BeautifulSoup (bs4),telegram.ext to make it happen.",
+    description:"Check out NoticeBot a cool Telegram buddy I made with Python. It's like a superhero that fetches the latest updates from our college website. I used web scraping tricks and the power of libraries like BeautifulSoup (bs4),telegram.ext to make it happen.",
     projectLink:"https://github.com/HKSuryan/Notice",
     imageUrl:'proimages/notice1.png',
     techStack:"Python, BeautifulSoup, telegram.ext, requests"

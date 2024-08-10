@@ -18,7 +18,7 @@ const Home = () => {
     <section className={styles.homeSection} id="home">
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
-          <h1 className={styles.introText}>Hi, I'm <span className={styles.name}>Harsh Kumar Suryan</span></h1>
+          <h1 className={styles.introText}>Hi, I&aposm <span className={styles.name}>Harsh Kumar Suryan</span></h1>
           <h2 className={styles.roleText}>
             <span className={styles.dynamicText}>{rotatingText[textIndex]}</span>
           </h2>
