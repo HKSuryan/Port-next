@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <>
       
-      <AnimationWrapper>
+      
         
 
          <Home/>
@@ -25,7 +25,7 @@ export default function HomePage() {
           <Contact/>
   
         
-      </AnimationWrapper>
+  
     </>
   );
 }
