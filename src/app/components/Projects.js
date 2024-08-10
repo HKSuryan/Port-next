@@ -11,7 +11,7 @@ const projectsData = [
 },
 {
     title:"Pacman",
-    description:"Crafted a Pac-Man game in Python&lsquo spicing it up with awesome sprites. Deployed Pygame&aposs magic for handling graphics and movements.",
+    description:"Created a Pac-Man game in Python&lsquo spicing it up with awesome sprites. Deployed Pygame&aposs magic for handling graphics and movements.",
     projectLink:"https://github.com/HKSuryan/Pacman",
     imageUrl:'proimages/res.png',
     techStack:"Python&lsquo Pygame&lsquo Sprites"
