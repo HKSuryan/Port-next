@@ -1,7 +1,6 @@
 .hamburger {
   display: none;
   cursor: pointer;
-  margin-right: 30px;
 }
 
 .hamburgerLine {
@@ -28,14 +27,12 @@
   .hamburger {
     display: block; /* Show hamburger menu */
   }
-
 }
 @media (min-width: 769px) {
   .hamburger {
     display: none; /* Show hamburger menu */
   }
-
 }
-.darkMode .hamburgerLine{
+.darkMode .hamburgerLine {
   background-color: var(--text-light);
 }

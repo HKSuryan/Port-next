@@ -1,10 +1,16 @@
-"use client"
-import { useEffect, useState } from 'react';
-import styles from '../styles/Home.module.css';
+"use client";
+import { useEffect, useState } from "react";
+import styles from "../styles/Home.module.css";
 
 const Home = () => {
   const [textIndex, setTextIndex] = useState(0);
-  const rotatingText = ['Full-Stack Developer', 'Problem Solver', 'Tech Enthusiast', 'Open Source Contributor','Chess Player'];
+  const rotatingText = [
+    "Full-Stack Developer",
+    "Problem Solver",
+    "Tech Enthusiast",
+    "Open Source Contributor",
+    "Chess Player",
+  ];
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -18,13 +24,22 @@ const Home = () => {
     <section className={styles.homeSection} id="home">
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
-          <h1 className={styles.introText}>Hi, I&apos;m <span className={styles.name}>Harsh Kumar Suryan</span></h1>
+          <h1 className={styles.introText}>
+            <span className={styles.hi}>Hi, I&apos;m</span>{" "}
+            <span className={styles.name}>Harsh Kumar Suryan</span>
+          </h1>
           <h2 className={styles.roleText}>
-            <span className={styles.dynamicText}>{rotatingText[textIndex]}</span>
+            <span className={styles.dynamicText}>
+              {rotatingText[textIndex]}
+            </span>
           </h2>
           <div className={styles.buttonsWrapper}>
-            <a href="#projects" className={styles.primaryButton}>View My Work</a>
-            <a href="#contact" className={styles.secondaryButton}>Get in Touch</a>
+            <a href="#projects" className={styles.primaryButton}>
+              View My Work
+            </a>
+            <a href="#contact" className={styles.secondaryButton}>
+              Get in Touch
+            </a>
           </div>
         </div>
       </div>

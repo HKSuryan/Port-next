@@ -1,65 +1,69 @@
 .aboutSection {
-    padding: 60px 20px;
-    background-color: var(--bg-about);
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .sectionTitle {
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 40px;
-    color: var(--primary-dark);
-  }
-  
+  padding: 60px 20px;
+  background-color: var(--bg-about);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sectionTitle {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--primary-dark);
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageWrapper {
+  flex: 1;
+  position: relative;
+  width: 300px;
+  height: 300px;
+
+  max-width: 300px;
+  margin: 20px;
+}
+
+.profileImage {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.textWrapper {
+  flex: 2;
+  max-width: 700px;
+  margin: 20px;
+}
+
+.aboutText {
+  font-size: 18px;
+  color: var(--about-text);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
   .content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
   }
-  
+
+  .textWrapper,
   .imageWrapper {
-    flex: 1;
-    max-width: 300px;
-    margin: 20px;
+    max-width: 100%;
+    margin: 10px 0;
   }
-  
-  .profileImage {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .textWrapper {
-    flex: 2;
-    max-width: 700px;
-    margin: 20px;
-  }
-  
-  .aboutText {
-    font-size: 18px;
-    color: var(--about-text);
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  
-  /* Media Queries */
-  @media (max-width: 768px) {
-    .content {
-      flex-direction: column;
-    }
-  
-    .textWrapper, .imageWrapper {
-      max-width: 100%;
-      margin: 10px 0;
-    }
-  }
-  
+}
