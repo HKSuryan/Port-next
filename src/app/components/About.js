@@ -8,12 +8,7 @@ const About = () => {
         <h2 className={styles.sectionTitle}>About me</h2>
         <div className={styles.content}>
           <div className={styles.imageWrapper}>
-            <Image
-              src="/pic.JPG"
-              alt="Your Name"
-              fill={true}
-              className={styles.profileImage}
-            />
+            <img src="/pic.JPG" alt="Name" className={styles.profileImage} />
           </div>
           <div className={styles.textWrapper}>
             <p className={styles.aboutText}>

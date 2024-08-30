@@ -20,7 +20,7 @@
 }
 
 .timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 0;
@@ -48,7 +48,7 @@
 }
 
 .timelineItem::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 20px;
   left: calc(50% - 8px);
@@ -92,23 +92,23 @@
 /* Media Queries */
 @media (max-width: 768px) {
   .timeline::before {
-      left: 20px;
+    left: 20px;
   }
 
   .timelineItem {
-      width: 100%;
-      padding-left: 40px;
-      padding-right: 20px;
-      margin-bottom: 40px;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 20px;
+    margin-bottom: 40px;
   }
 
   .timelineItem:nth-child(odd),
   .timelineItem:nth-child(even) {
-      padding-left: 40px;
-      padding-right: 20px;
+    padding-left: 40px;
+    padding-right: 20px;
   }
 
   .timelineItem::before {
-      left: 20px;
+    left: -7px;
   }
 }
