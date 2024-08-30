@@ -49,7 +49,6 @@
 .dynamicText {
   transition: opacity 0.5s ease-in-out;
   animation: fadeInOut 2s ease-in-out infinite;
-  animation-delay: 0.5s;
 }
 
 @keyframes fadeInOut {
