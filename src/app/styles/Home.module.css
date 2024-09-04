@@ -38,6 +38,7 @@
 
 .name {
   color: var(--secondary-color);
+  font-style: italic;
 }
 
 .roleText {
@@ -47,6 +48,7 @@
 }
 
 .dynamicText {
+  font-weight: 400;
   transition: opacity 0.5s ease-in-out;
   animation: fadeInOut 2s ease-in-out infinite;
 }
@@ -78,12 +80,16 @@
   color: var(--text-home);
   text-decoration: none;
   border-radius: 5px;
-  box-shadow: 0 4px 10px rgba(0, 112, 243, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 112, 243, 0.857);
   transition:
     background-color 0.3s ease,
     transform 0.3s ease;
   border: 2px solid var(--primary-color);
   border-radius: 5px;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
+    transform 0.4s ease;
 }
 
 .primaryButton:hover {

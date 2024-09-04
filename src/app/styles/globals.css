@@ -4,17 +4,20 @@
   --text: #333;
   --white: #ffffff;
   --black: #000000;
+  --name: linear-gradient(pink, white, red);
 }
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+  /* font-family: 'Arial', sans-serif; */
 }
 
-
-::-webkit-scrollbar {display: none;}
+::-webkit-scrollbar {
+  display: none;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -32,7 +35,6 @@ a {
   --background-light: #f7f7f7;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -41,26 +43,27 @@ html {
 :root {
   --background-color: #ffffff;
   --text-color: #000000;
-  --bg-home:white;
+  --bg-home: white;
   --text-home: #333;
-  --bg-about:var(--light-gray);
-  --about-text:var(--black);
-  --project-shadow:rgba(0, 0, 0, 0.1);
+  --bg-about: var(--light-gray);
+  --about-text: var(--black);
+  --project-shadow: rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="dark"] {
   --background-color: #121212;
   --text-color: #ffffff;
-  --bg-home:black;
-  --text-home:white;
-  --bg-about:rgb(20, 19, 19);
-  --about-text:grey;
-  --project-shadow:rgb(104, 100, 100);
-
+  --bg-home: black;
+  --text-home: white;
+  --bg-about: rgb(20, 19, 19);
+  --about-text: grey;
+  --project-shadow: rgb(104, 100, 100);
 }
 
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
