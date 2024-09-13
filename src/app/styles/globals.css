@@ -48,6 +48,7 @@ html {
   --bg-about: var(--light-gray);
   --about-text: var(--black);
   --project-shadow: rgba(0, 0, 0, 0.1);
+  --sidebar-background: linear-gradient(180deg, #5195d8 0%, #004a8c 100%);
 }
 
 [data-theme="dark"] {
@@ -58,6 +59,7 @@ html {
   --bg-about: rgb(20, 19, 19);
   --about-text: grey;
   --project-shadow: rgb(104, 100, 100);
+  --sidebar-background: #121212;
 }
 
 body {
