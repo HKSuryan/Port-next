@@ -50,7 +50,7 @@ const Sidebar = () => {
             <Link href="#skills">Skills</Link>
           </li>
           <li>
-            <Link href="#project">Projects</Link>
+            <Link href="#projects">Projects</Link>
           </li>
           <li>
             <Link href="#experience">Experience</Link>
