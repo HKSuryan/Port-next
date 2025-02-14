@@ -2,6 +2,31 @@ import styles from "../styles/Projects.module.css";
 
 const projectsData = [
   {
+    title: "The Expense Diary",
+    description:
+      "Developed a full stack web application using Spring Boot (Java) and ReactJS to automate personal finance management. Implemented a webhook to automatically send transaction messages from mobile devices to the backend, where data is processed using ChatGPT and stored in a database.",
+    projectLink:
+      "https://github.com/HKSuryan/The-Expense-Diary-Mark-1_Frontend-",
+    imageUrl: "proimages/ExpenseDiary.png",
+    techStack: "SpringBoot, ReactJS, OpenAi, Java, Javascript, MongoDB",
+  },
+  {
+    title: "Notice",
+    description:
+      "'NoticeBot' a cool Telegram buddy that fetches the latest updates from our college website. I used web scraping tricks and the power of libraries like BeautifulSoup (bs4),telegram.ext to make it happen.",
+    projectLink: "https://github.com/HKSuryan/Notice",
+    imageUrl: "proimages/notice1.png",
+    techStack: "Python, BeautifulSoup, telegram.ext, requests, MongoDB",
+  },
+  {
+    title: "WeatherCity",
+    description:
+      "Weather app with city search functionality, displaying current conditions and a 7-day forecast. Implemented Firebase authentication for secure user login and data storage.",
+    projectLink: "https://github.com/HKSuryan/WeatherCity",
+    imageUrl: "proimages/weatherCity.png",
+    techStack: "ReactJS, Firebase, MUI, openweathermapAPI",
+  },
+  {
     title: "Tetris",
     description:
       "Built with Pygame using Python. Created the game's look, how it works, and how players interact with it. Learned problem-solving and attention to detail.",
@@ -16,14 +41,6 @@ const projectsData = [
     projectLink: "https://github.com/HKSuryan/Pacman",
     imageUrl: "proimages/res.png",
     techStack: "Python, Pygame, Sprites",
-  },
-  {
-    title: "Notice",
-    description:
-      "'NoticeBot' a cool Telegram buddy that fetches the latest updates from our college website. I used web scraping tricks and the power of libraries like BeautifulSoup (bs4),telegram.ext to make it happen.",
-    projectLink: "https://github.com/HKSuryan/Notice",
-    imageUrl: "proimages/notice1.png",
-    techStack: "Python, BeautifulSoup, telegram.ext, requests",
   },
   {
     title: "PizzaX",
