@@ -2,6 +2,19 @@ import styles from "../styles/Experience.module.css";
 
 const experiencesData = [
   {
+    title: "Software Engineer",
+    company: "Encora",
+    duration: "Aug 2025 - Present",
+    description: "",
+  },
+  {
+    title: "SDE intern",
+    company: "Amrapali Steels Pvt. Ltd.",
+    duration: "Jan 2025 - April 2025",
+    description:
+      "Working on an Order Management System utilising Spring Boot, MongoDB, and Telegram Bot API to automate order processing.Improved operational efficiency by streamlining order processing for salespersons and admin.",
+  },
+  {
     title: "Web Developer Intern",
     company: "IIT Academy",
     duration: "May 2024 - Jul 2024",
