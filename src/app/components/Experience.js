@@ -5,7 +5,8 @@ const experiencesData = [
     title: "Software Engineer",
     company: "Encora",
     duration: "Aug 2025 - Present",
-    description: "",
+    description:
+      "Structured training in Java Full Stack Development, Object-Oriented Programming (OOPs), Design Patterns, Multithreading, and the Collections Framework.Gaining hands-on experience with Spring Boot, Spring Security, AOP, Microservices Architecture, AWS (EC2, Lambda, SQS, SNS), Kafka",
   },
   {
     title: "SDE intern",
