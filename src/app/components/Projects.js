@@ -15,7 +15,7 @@ const projectsData = [
     description:
       "End-to-end e-commerce platform built using Spring Boot microservices, featuring secure authentication, order management, database integration, and Docker-based deployment on AWS.",
     projectLink: "https://github.com/HKSuryan/ECommerceProject_Frontend",
-    imageUrl: "proimages/ExpenseDiary.png",
+    imageUrl: "proimages/LoyaltyPlus.png",
     techStack:
       "SpringBoot, ReactJS, SQL, Java, Javascript, AWS(RDS, ECS etc.), MicroServices Architecture, Docker, HTML, CSS, Redux-Toolkit",
   },
