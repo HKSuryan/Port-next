@@ -11,6 +11,15 @@ const projectsData = [
     techStack: "SpringBoot, ReactJS, OpenAi, Java, Javascript, MongoDB",
   },
   {
+    title: "Loyalty Plus",
+    description:
+      "End-to-end e-commerce platform built using Spring Boot microservices, featuring secure authentication, order management, database integration, and Docker-based deployment on AWS.",
+    projectLink: "https://github.com/HKSuryan/ECommerceProject_Frontend",
+    imageUrl: "proimages/ExpenseDiary.png",
+    techStack:
+      "SpringBoot, ReactJS, SQL, Java, Javascript, AWS(RDS, ECS etc.), MicroServices Architecture, Docker, HTML, CSS, Redux-Toolkit",
+  },
+  {
     title: "Notice",
     description:
       "'NoticeBot' a cool Telegram buddy that fetches the latest updates from our college website. I used web scraping tricks and the power of libraries like BeautifulSoup (bs4),telegram.ext to make it happen.",
