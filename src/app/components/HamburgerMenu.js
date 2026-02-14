@@ -1,14 +1,24 @@
 "use client";
 
-import styles from '../styles/HamburgerMenu.module.css';
+import styles from "../styles/HamburgerMenu.module.css";
 
-const HamburgerMenu = ({ isOpen, setIsOpen , darkMode}) => {
+const HamburgerMenu = ({ isOpen, setIsOpen, darkMode }) => {
   return (
-    <div className={`${styles.hamburger} ${darkMode ? styles.darkMode : ''}` } onClick={() => setIsOpen(!isOpen)}>
-      <div className={`${styles.hamburgerLine} ${isOpen ? styles.hamburgerOpen1 : ''}`} />
-      <div className={`${styles.hamburgerLine} ${isOpen ? styles.hamburgerOpen2 : ''}`} />
-      <div className={`${styles.hamburgerLine} ${isOpen ? styles.hamburgerOpen3 : ''}`} />
-    </div>
+    <button
+      className={`${styles.hamburger} ${darkMode ? styles.darkMode : ""}`}
+      onClick={() => setIsOpen(!isOpen)}
+      aria-label="Toggle navigation menu"
+      aria-expanded={isOpen}>
+      <span
+        className={`${styles.hamburgerLine} ${isOpen ? styles.open1 : ""}`}
+      />
+      <span
+        className={`${styles.hamburgerLine} ${isOpen ? styles.open2 : ""}`}
+      />
+      <span
+        className={`${styles.hamburgerLine} ${isOpen ? styles.open3 : ""}`}
+      />
+    </button>
   );
 };
 

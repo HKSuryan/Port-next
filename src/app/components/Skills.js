@@ -1,39 +1,59 @@
 import styles from "../styles/Skills.module.css";
 
-// Assuming you have images in the public/images/skills directory
-const skillsData = [
-  { name: "JavaScript", image: "/tsimages/js.gif" },
-  { name: "React", image: "/tsimages/react.png" },
-  { name: "Next.js", image: "/tsimages/next.jpeg" },
-  { name: "Node.js", image: "/tsimages/node.png" },
-  { name: "CSS", image: "/tsimages/css.png" },
-  { name: "HTML", image: "/tsimages/html.png" },
-  { name: "Git", image: "/tsimages/gitu.jpeg" },
-  { name: "MongoDB", image: "/tsimages/mongo.png" },
-  { name: "Java", image: "/tsimages/java.png" },
-  { name: "SpringBoot", image: "/tsimages/spring.png" },
-  { name: "Postman", image: "/tsimages/postman.png" },
-  { name: "Python", image: "/tsimages/python.png" },
-  { name: "CPP", image: "/tsimages/cpp.png" },
-  { name: "C", image: "/tsimages/c.png" },
+const skills = [
+  {
+    title: "Core",
+    items: ["Java", "Spring Boot", "REST APIs", "MongoDB", "MySQL", "Git"],
+  },
+  {
+    title: "Frontend",
+    items: ["React", "Next.js", "JavaScript", "HTML", "CSS"],
+  },
+  {
+    title: "Cloud & Systems",
+    items: [
+      "AWS (EC2, Lambda, SQS/SNS)",
+      "Kafka (Exposure)",
+      "Docker (Basics)",
+    ],
+  },
+  {
+    title: "Tools",
+    items: ["Postman", "GitHub", "VS Code", "Linux Basics"],
+  },
+  {
+    title: "Languages",
+    items: ["Java", "JavaScript", "Python", "C", "C++"],
+  },
 ];
 
 const Skills = () => {
   return (
     <section className={styles.skillsSection} id="skills">
       <div className={styles.container}>
-        <h2 className={styles.sectionTitle}>Skills</h2>
-        <p className={styles.subtitle}>
-          Here are some of the technologies I am proficient in:
-        </p>
-        <div className={styles.skillsContent}>
-          {skillsData.map((skill, index) => (
-            <div key={index} className={styles.skillCard}>
-              <img
-                src={skill.image}
-                alt={skill.name}
-                className={styles.skillImage}
-              />
+        <div className={styles.header}>
+          <h2 className={styles.sectionTitle}>Skills</h2>
+          <p className={styles.subtitle}>
+            A focused set of technologies I use to build production-ready
+            systems.
+          </p>
+        </div>
+
+        <div className={styles.grid}>
+          {skills.map((group) => (
+            <div key={group.title} className={styles.card}>
+              <div className={styles.cardTop}>
+                <h3 className={styles.cardTitle}>{group.title}</h3>
+                <span className={styles.badge}>Stack</span>
+              </div>
+
+              <div className={styles.chips}>
+                {group.items.map((s) => (
+                  <span key={s} className={styles.chip}>
+                    {s}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>

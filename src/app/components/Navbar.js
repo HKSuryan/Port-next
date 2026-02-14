@@ -1,98 +1,125 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/Navbar.module.css";
 import HamburgerMenu from "./HamburgerMenu";
+
+const LINKS = [
+  { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
+  { href: "#projects", label: "Projects" },
+  { href: "#experience", label: "Experience" },
+  { href: "#contact", label: "Contact" },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
-  const [theme, setTheme] = useState("light");
-  // Toggle Dark Mode
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    setTheme(!darkMode ? "light" : "dark");
-    document.documentElement.setAttribute("data-theme", theme);
-  };
 
-  // Sync dark mode with system preference
+  // Init theme from system preference (and keep synced)
   useEffect(() => {
-    const systemDarkMode = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
-    if (systemDarkMode) {
-      setDarkMode(true);
-      document.documentElement.setAttribute("data-theme", "dark");
-    }
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    const apply = (isDark) => {
+      setDarkMode(isDark);
+      document.documentElement.setAttribute(
+        "data-theme",
+        isDark ? "dark" : "light",
+      );
+    };
+
+    apply(mq.matches);
+    const handler = (e) => apply(e.matches);
+
+    mq.addEventListener?.("change", handler);
+    return () => mq.removeEventListener?.("change", handler);
   }, []);
 
-  return (
-    <nav className={`${styles.navbar} ${darkMode ? styles.dark : ""}`}>
-      <div className={styles.logo}>
-        <a href="#home">@hksuryan</a>
-      </div>
-      <HamburgerMenu
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-        darkMode={darkMode}
-      />
-      <div className={styles.menuClosed}>
-        <a
-          href="#about"
-          className={styles.menuItem}
-          onClick={() => setIsOpen(false)}>
-          About
-        </a>
-        <a
-          href="#skills"
-          className={styles.menuItem}
-          onClick={() => setIsOpen(false)}>
-          Skills
-        </a>
-        <a
-          href="#projects"
-          className={styles.menuItem}
-          onClick={() => setIsOpen(false)}>
-          Projects
-        </a>
-        <a
-          href="#experience"
-          className={styles.menuItem}
-          onClick={() => setIsOpen(false)}>
-          Experience
-        </a>
-        <a
-          href="#contact"
-          className={styles.menuItem}
-          onClick={() => setIsOpen(false)}>
-          Contact
-        </a>
-        <button className={styles.darkModeToggle} onClick={toggleDarkMode}>
-          {darkMode ? "☀️" : "🌙"}
-        </button>
-      </div>
+  const toggleDarkMode = () => {
+    setDarkMode((prev) => {
+      const next = !prev;
+      document.documentElement.setAttribute(
+        "data-theme",
+        next ? "dark" : "light",
+      );
+      return next;
+    });
+  };
 
-      <div className={`${isOpen ? styles.menuOpen : styles.mc}`}>
-        <a href="#about" className={styles.menuItem}>
-          About
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
+  const onNavClick = () => setIsOpen(false);
+
+  return (
+    <>
+      <nav className={styles.navbar}>
+        <a className={styles.logo} href="#home" onClick={onNavClick}>
+          @hksuryan
         </a>
-        <a href="#skills" className={styles.menuItem}>
-          Skills
-        </a>
-        <a href="#projects" className={styles.menuItem}>
-          Projects
-        </a>
-        <a href="#experience" className={styles.menuItem}>
-          Experience
-        </a>
-        <a href="#contact" className={styles.menuItem}>
-          Contact
-        </a>
-        <button className={styles.darkModeToggle} onClick={toggleDarkMode}>
-          {darkMode ? "☀️" : "🌙"}
-        </button>
-      </div>
-    </nav>
+
+        {/* Desktop links */}
+        <div className={styles.desktopMenu}>
+          {LINKS.map((l) => (
+            <a key={l.href} href={l.href} className={styles.menuItem}>
+              {l.label}
+            </a>
+          ))}
+
+          <button
+            className={styles.themeBtn}
+            onClick={toggleDarkMode}
+            aria-label="Toggle dark mode"
+            title="Toggle theme">
+            {darkMode ? "☀️" : "🌙"}
+          </button>
+        </div>
+
+        {/* Mobile controls */}
+        <div className={styles.mobileControls}>
+          <button
+            className={styles.themeBtn}
+            onClick={toggleDarkMode}
+            aria-label="Toggle dark mode"
+            title="Toggle theme">
+            {darkMode ? "☀️" : "🌙"}
+          </button>
+
+          <HamburgerMenu
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            darkMode={darkMode}
+          />
+        </div>
+      </nav>
+
+      {/* Mobile overlay + drawer */}
+      <div
+        className={`${styles.overlay} ${isOpen ? styles.overlayShow : ""}`}
+        onClick={onNavClick}
+        aria-hidden={!isOpen}
+      />
+
+      <aside
+        className={`${styles.drawer} ${isOpen ? styles.drawerOpen : ""}`}
+        aria-hidden={!isOpen}>
+        <div className={styles.drawerInner}>
+          {LINKS.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className={styles.drawerItem}
+              onClick={onNavClick}>
+              {l.label}
+            </a>
+          ))}
+        </div>
+      </aside>
+    </>
   );
 };
 

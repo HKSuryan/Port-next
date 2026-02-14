@@ -1,38 +1,46 @@
 .hamburger {
   display: none;
   cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 6px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.hamburger:hover {
+  background: var(--surface-2);
 }
 
 .hamburgerLine {
-  width: 25px;
-  height: 3px;
-  background-color: var(--black);
-  margin: 5px 0;
-  transition: 0.4s;
+  width: 24px;
+  height: 2px;
+  background-color: var(--fg);
+  margin: 6px 0;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+  transform-origin: center;
 }
 
-.hamburgerOpen1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
+/* Open animation */
+.open1 {
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
-.hamburgerOpen2 {
+.open2 {
   opacity: 0;
 }
 
-.hamburgerOpen3 {
-  transform: rotate(45deg) translate(-5px, -6px);
+.open3 {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* Show only on mobile */
 @media (max-width: 768px) {
   .hamburger {
-    display: block; /* Show hamburger menu */
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
   }
-}
-@media (min-width: 769px) {
-  .hamburger {
-    display: none; /* Show hamburger menu */
-  }
-}
-.darkMode .hamburgerLine {
-  background-color: var(--text-light);
 }

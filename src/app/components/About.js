@@ -5,26 +5,90 @@ const About = () => {
   return (
     <section className={styles.aboutSection} id="about">
       <div className={styles.container}>
-        <h2 className={styles.sectionTitle}>About me</h2>
+        <div className={styles.header}>
+          <h2 className={styles.sectionTitle}>About</h2>
+          {/* <p className={styles.subtitle}>
+            Backend-first full-stack engineer focused on building reliable
+            systems and clean user experiences.
+          </p> */}
+        </div>
+
         <div className={styles.content}>
           <div className={styles.imageWrapper}>
-            <img src="/pic.JPG" alt="Name" className={styles.profileImage} />
+            <div className={styles.imageRing}>
+              <Image
+                src="/pic.JPG"
+                alt="Harsh Kumar Suryan"
+                width={320}
+                height={320}
+                className={styles.profileImage}
+                priority
+              />
+            </div>
+
+            {/* <div className={styles.quickLinks}>
+              <a className={styles.linkPill} href="mailto:hksuryan@gmail.com">
+                Email
+              </a>
+            </div> */}
           </div>
+
           <div className={styles.textWrapper}>
             <p className={styles.aboutText}>
-              Hi, I&apos;m Harsh Kumar Suryan, a passionate fellow with a strong
-              background in software development, with experience in both
-              front-end and back-end technologies. I have a deep love for
-              creating intuitive and responsive web applications. I enjoy
-              solving complex problems and am always eager to learn new
-              technologies and improve my skills.
+              I’m <strong>Harsh Kumar Suryan</strong> — a software engineer who
+              enjoys building backend services and full-stack products that are{" "}
+              <strong>scalable</strong>, <strong>secure</strong>, and easy to
+              maintain. I work primarily with{" "}
+              <strong>Java / Spring Boot</strong>, databases like{" "}
+              <strong>MongoDB/MySQL</strong>, and modern web stacks.
             </p>
+
             <p className={styles.aboutText}>
-              When I&apos;m not coding, you&apos;ll find me making smoothies or
-              challenging friends to a game of chess. I&apos;m always open to
-              exciting new opportunities, so feel free to get in touch if
-              you&apos;d like to work together.
+              I care a lot about clean APIs, good architecture, and turning
+              vague requirements into reliable features. Outside work, I
+              recharge with chess and small experiments (yes, including
+              smoothies).
             </p>
+
+            <div className={styles.highlights}>
+              <div className={styles.highlightCard}>
+                <p className={styles.highlightTitle}>Backend</p>
+                <p className={styles.highlightText}>
+                  Spring Boot, REST APIs, Security, Microservices
+                </p>
+              </div>
+              <div className={styles.highlightCard}>
+                <p className={styles.highlightTitle}>Data</p>
+                <p className={styles.highlightText}>
+                  MongoDB, MySQL, schema & indexing basics
+                </p>
+              </div>
+              <div className={styles.highlightCard}>
+                <p className={styles.highlightTitle}>Cloud</p>
+                <p className={styles.highlightText}>
+                  AWS (EC2, Lambda, SQS/SNS), Kafka exposure
+                </p>
+              </div>
+              <div className={styles.highlightCard}>
+                <p className={styles.highlightTitle}>Problem Solving</p>
+                <p className={styles.highlightText}>
+                  500+ DSA questions, strong debugging mindset
+                </p>
+              </div>
+            </div>
+
+            {/* <div className={styles.ctaRow}>
+              <a className={styles.primaryCta} href="#projects">
+                View Case Studies
+              </a>
+              <a
+                className={styles.secondaryCta}
+                href="/Harsh-Kumar-Suryan-Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer">
+                Download Resume
+              </a>
+            </div> */}
           </div>
         </div>
       </div>

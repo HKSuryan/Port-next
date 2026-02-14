@@ -4,58 +4,128 @@ const experiencesData = [
   {
     title: "Software Engineer",
     company: "Encora",
-    duration: "Aug 2025 - Present",
-    description:
-      "Structured training in Java Full Stack Development, Object-Oriented Programming (OOPs), Design Patterns, Multithreading, and the Collections Framework.Gaining hands-on experience with Spring Boot, Spring Security, AOP, Microservices Architecture, AWS (EC2, Lambda, SQS, SNS), Kafka",
+    duration: "Aug 2025 — Present",
+    location: "India",
+    tags: [
+      "Java",
+      "Spring Boot",
+      "Spring Security",
+      "AWS",
+      "Microservices",
+      "Kafka",
+    ],
+    bullets: [
+      "Strengthening backend engineering fundamentals through enterprise-grade training in OOP, design patterns, multithreading, and collections.",
+      "Building and reviewing Spring Boot services with focus on clean architecture and security (Spring Security).",
+      "Hands-on exposure to microservices workflows and AWS components (EC2, Lambda, SQS, SNS) with Kafka-based event flows.",
+    ],
   },
   {
-    title: "SDE intern",
+    title: "SDE Intern",
     company: "Amrapali Steels Pvt. Ltd.",
-    duration: "Jan 2025 - April 2025",
-    description:
-      "Working on an Order Management System utilising Spring Boot, MongoDB, and Telegram Bot API to automate order processing.Improved operational efficiency by streamlining order processing for salespersons and admin.",
+    duration: "Jan 2025 — Apr 2025",
+    location: "India",
+    tags: ["Spring Boot", "MongoDB", "Telegram Bot API"],
+    bullets: [
+      "Built an Order Management System using Spring Boot + MongoDB integrated with Telegram Bot API for sales/admin order flows.",
+      "Streamlined order capture and tracking, improving operational clarity with faster request handling.",
+      "Designed robust data flow for creation, validation, and exports to support daily operations.",
+    ],
   },
   {
     title: "Web Developer Intern",
     company: "IIT Academy",
-    duration: "May 2024 - Jul 2024",
-    description:
-      "Designed and developed a fully responsive web application from scratch using the MERN stack (MongoDB, Express.js, React, Node.js). Implemented dynamic and interactive tables using React-tables. Utilized Tailwind CSS for rapid and flexible styling, ensuring a modern and user-friendly interface.",
+    duration: "May 2024 — Jul 2024",
+    location: "India",
+    tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind"],
+    bullets: [
+      "Developed a responsive MERN web app from scratch with reusable components.",
+      "Implemented dynamic, interactive tables using react-table for better data exploration.",
+      "Shipped consistent UI quickly using Tailwind CSS across screen sizes.",
+    ],
   },
   {
-    title: "Trainee",
+    title: "Trainee (MERN)",
     company: "Brain Mentors",
-    duration: "Jul 2023 - Aug 2023",
-    description:
-      "Completed intensive training in MERN (MongoDB, Express.js, React, Node.js) stack, Applied acquired skills to successfully complete a project. Demonstrating practical understanding of web development principles and hands-on experience in creating dynamic, responsive applications.",
+    duration: "Jul 2023 — Aug 2023",
+    location: "India",
+    tags: ["MongoDB", "Express", "React", "Node.js"],
+    bullets: [
+      "Completed intensive MERN training with focus on practical development and debugging.",
+      "Built a project applying routing, APIs, and database integration fundamentals.",
+    ],
   },
   {
-    title: "Intern",
+    title: "AI Intern (IBM SkillsBuild via AICTE)",
     company: "Edunet Foundation",
-    duration: "Jun 2023 - Jul 2023",
-    description:
-      "Interned in Artificial Intelligence using IBM SkillsBuild under AICTE. Gaining practical experience in applying AI concepts and technologies.",
+    duration: "Jun 2023 — Jul 2023",
+    location: "India",
+    tags: ["AI", "IBM SkillsBuild"],
+    bullets: [
+      "Worked on foundational AI concepts through structured modules and guided tasks.",
+      "Explored practical AI workflows and problem framing.",
+    ],
   },
-  // Add more experiences as needed
 ];
 
 const Experience = () => {
   return (
     <section className={styles.experienceSection} id="experience">
-      <h2 className={styles.sectionTitle}>Experience</h2>
-      <div className={styles.timeline}>
-        {experiencesData.map((experience, index) => (
-          <div key={index} className={styles.timelineItem}>
-            <div className={styles.timelineContent}>
-              <h3 className={styles.experienceTitle}>{experience.title}</h3>
-              <h4 className={styles.experienceCompany}>{experience.company}</h4>
-              <p className={styles.experienceDuration}>{experience.duration}</p>
-              <p className={styles.experienceDescription}>
-                {experience.description}
-              </p>
-            </div>
-          </div>
-        ))}
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <h2 className={styles.sectionTitle}>Experience</h2>
+          <p className={styles.subtitle}>
+            A timeline of roles where I built systems, shipped features, and
+            improved workflows.
+          </p>
+        </div>
+
+        <div className={styles.timeline}>
+          {experiencesData.map((exp) => (
+            <article
+              key={`${exp.company}-${exp.title}`}
+              className={styles.item}>
+              <div className={styles.rail} aria-hidden="true">
+                <span className={styles.dot} />
+              </div>
+
+              <div className={styles.card}>
+                <div className={styles.cardTop}>
+                  <div className={styles.left}>
+                    <h3 className={styles.role}>{exp.title}</h3>
+                    <p className={styles.meta}>
+                      <span className={styles.company}>{exp.company}</span>
+                      {exp.location ? (
+                        <span className={styles.sep}> • </span>
+                      ) : null}
+                      {exp.location ? (
+                        <span className={styles.location}>{exp.location}</span>
+                      ) : null}
+                    </p>
+                  </div>
+
+                  <span className={styles.duration}>{exp.duration}</span>
+                </div>
+
+                {exp.tags?.length ? (
+                  <div className={styles.tags}>
+                    {exp.tags.map((t) => (
+                      <span key={t} className={styles.tag}>
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                ) : null}
+
+                <ul className={styles.bullets}>
+                  {exp.bullets.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

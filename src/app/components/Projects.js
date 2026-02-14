@@ -1,102 +1,241 @@
+import Image from "next/image";
 import styles from "../styles/Projects.module.css";
 
 const projectsData = [
   {
     title: "The Expense Diary",
     description:
-      "Developed a full stack web application using Spring Boot (Java) and ReactJS to automate personal finance management. Implemented a webhook to automatically send transaction messages from mobile devices to the backend, where data is processed using ChatGPT and stored in a database.",
-    projectLink:
-      "https://github.com/HKSuryan/The-Expense-Diary-Mark-1_Frontend-",
-    imageUrl: "proimages/ExpenseDiary.png",
-    techStack: "SpringBoot, ReactJS, OpenAi, Java, Javascript, MongoDB",
+      "Full-stack finance tracker using Spring Boot + React. Ingests transaction messages via webhook, extracts structured data, and stores it for analytics and reporting.",
+    links: {
+      code: "https://github.com/HKSuryan/The-Expense-Diary-Mark-1_Frontend-",
+    },
+    imageUrl: "/proimages/ExpenseDiary.png",
+    tech: ["Spring Boot", "React", "MongoDB", "OpenAI", "Java"],
+    featured: true,
   },
   {
     title: "Loyalty Plus",
     description:
-      "End-to-end e-commerce platform built using Spring Boot microservices, featuring secure authentication, order management, database integration, and Docker-based deployment on AWS.",
-    projectLink: "https://github.com/HKSuryan/ECommerceProject_Frontend",
-    imageUrl: "proimages/LoyaltyPlus.png",
-    techStack:
-      "SpringBoot, ReactJS, SQL, Java, Javascript, AWS(RDS, ECS etc.), MicroServices Architecture, Docker, HTML, CSS, Redux-Toolkit",
+      "E-commerce platform built with Spring Boot microservices, secure auth, order management, and Docker-based deployment on AWS.",
+    links: {
+      code: "https://github.com/HKSuryan/ECommerceProject_Frontend",
+    },
+    imageUrl: "/proimages/LoyaltyPlus.png",
+    tech: ["Spring Boot", "Microservices", "SQL", "Docker", "AWS", "React"],
+    featured: true,
   },
   {
-    title: "Notice",
+    title: "NoticeBot",
     description:
-      "'NoticeBot' a cool Telegram buddy that fetches the latest updates from our college website. I used web scraping tricks and the power of libraries like BeautifulSoup (bs4),telegram.ext to make it happen.",
-    projectLink: "https://github.com/HKSuryan/Notice",
-    imageUrl: "proimages/notice1.png",
-    techStack: "Python, BeautifulSoup, telegram.ext, requests, MongoDB",
+      "Telegram bot that monitors college notices and notifies users by scraping and diff-checking updates reliably.",
+    links: { code: "https://github.com/HKSuryan/Notice" },
+    imageUrl: "/proimages/notice1.png",
+    tech: ["Python", "BeautifulSoup", "Telegram", "MongoDB"],
+    featured: true,
   },
   {
     title: "WeatherCity",
     description:
-      "Weather app with city search functionality, displaying current conditions and a 7-day forecast. Implemented Firebase authentication for secure user login and data storage.",
-    projectLink: "https://github.com/HKSuryan/WeatherCity",
-    imageUrl: "proimages/weatherCity.png",
-    techStack: "ReactJS, Firebase, MUI, openweathermapAPI",
-  },
-  {
-    title: "Tetris",
-    description:
-      "Built with Pygame using Python. Created the game's look, how it works, and how players interact with it. Learned problem-solving and attention to detail.",
-    projectLink: "https://github.com/HKSuryan/Tetris",
-    imageUrl: "proimages/tetris.png",
-    techStack: "Python, Pygame",
-  },
-  {
-    title: "Pacman",
-    description:
-      "Crafted a Pac-Man game in Python, spicing it up with awesome sprites. Deployed Pygame's magic for handling graphics and movements.",
-    projectLink: "https://github.com/HKSuryan/Pacman",
-    imageUrl: "proimages/res.png",
-    techStack: "Python, Pygame, Sprites",
+      "Weather app with city search, current conditions, and 7-day forecast with Firebase auth.",
+    links: { code: "https://github.com/HKSuryan/WeatherCity" },
+    imageUrl: "/proimages/weatherCity.png",
+    tech: ["React", "Firebase", "MUI", "OpenWeather API"],
   },
   {
     title: "PizzaX",
     description:
-      "Presenting PizzaX dynamic web app cooked up with the MERN stack, this app not only satisfies tech cravings but also offers a delightful user experience.",
-    projectLink: "https://github.com/HKSuryan/pizzaX",
-    imageUrl: "proimages/pizza.png",
-    techStack: "ReactJS, Javascript, MongoDB, NodeJS, HTML, CSS, MUI, axios",
+      "MERN app with modern UI patterns and API-driven product flows.",
+    links: { code: "https://github.com/HKSuryan/pizzaX" },
+    imageUrl: "/proimages/pizza.png",
+    tech: ["React", "Node.js", "MongoDB", "MUI"],
   },
   {
     title: "Lyrical",
     description:
-      "Introducing Lyrical a web-based app. This app connects to the iTunes API, letting users search for their favorite artists and get a list of their songs. With a sleek and user-friendly interface.",
-    projectLink: "https://github.com/HKSuryan/Lyrical",
-    imageUrl: "proimages/Lyrical.png",
-    techStack: "ReactJS, itunesAPI, Javascript, MUI, axios",
+      "Music search app using the iTunes API with a clean, responsive interface.",
+    links: { code: "https://github.com/HKSuryan/Lyrical" },
+    imageUrl: "/proimages/Lyrical.png",
+    tech: ["React", "iTunes API", "MUI"],
+  },
+  {
+    title: "Tetris",
+    description:
+      "Classic Tetris built with Pygame focusing on game loop, controls, and collision logic.",
+    links: { code: "https://github.com/HKSuryan/Tetris" },
+    imageUrl: "/proimages/tetris.png",
+    tech: ["Python", "Pygame"],
+  },
+  {
+    title: "Pacman",
+    description:
+      "Pac-Man built with Pygame using sprite-based movement and collisions.",
+    links: { code: "https://github.com/HKSuryan/Pacman" },
+    imageUrl: "/proimages/res.png",
+    tech: ["Python", "Pygame"],
   },
 ];
 
-const Projects = () => {
+export default function Projects() {
+  const featured = projectsData.filter((p) => p.featured);
+  const others = projectsData.filter((p) => !p.featured);
+
+  const hero = featured[0];
+  const side = featured.slice(1, 3);
+
   return (
     <section className={styles.projectsSection} id="projects">
-      <h2 className={styles.sectionTitle}>Projects</h2>
-      <div className={styles.projectsGrid}>
-        {projectsData.map((project, index) => (
-          <div key={index} className={styles.projectCard}>
-            <img
-              src={project.imageUrl}
-              alt={project.title}
-              className={styles.projectImage}
-            />
-            <div className={styles.projectContent}>
-              <h3 className={styles.projectTitle}>{project.title}</h3>
-              <p className={styles.projectDescription}>{project.description}</p>
-              <a
-                href={project.projectLink}
-                className={styles.projectLink}
-                target="_blank"
-                rel="noopener noreferrer">
-                View Project
-              </a>
-            </div>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <div>
+            <h2 className={styles.sectionTitle}>Projects</h2>
+            <p className={styles.subtitle}>
+              Case-study style featured work — plus other builds and
+              experiments.
+            </p>
           </div>
-        ))}
+
+          <a
+            className={styles.githubBtn}
+            href="https://github.com/HKSuryan"
+            target="_blank"
+            rel="noopener noreferrer">
+            GitHub →
+          </a>
+        </div>
+
+        {/* Featured */}
+        <div className={styles.featuredLayout}>
+          {hero && <HeroCard project={hero} />}
+          <div className={styles.sideGrid}>
+            {side.map((p) => (
+              <MiniFeaturedCard key={p.title} project={p} />
+            ))}
+          </div>
+        </div>
+
+        {/* More */}
+        <div className={styles.moreHeader}>
+          <h3 className={styles.blockTitle}>More projects</h3>
+          <span className={styles.miniHint}>
+            Smaller builds and experiments
+          </span>
+        </div>
+
+        <div className={styles.grid}>
+          {others.map((p) => (
+            <ProjectCard key={p.title} project={p} />
+          ))}
+        </div>
       </div>
     </section>
   );
-};
+}
 
-export default Projects;
+function HeroCard({ project }) {
+  return (
+    <article className={styles.heroCard}>
+      <div className={styles.heroMedia}>
+        <Image
+          src={project.imageUrl}
+          alt={project.title}
+          fill
+          className={styles.heroImage}
+          sizes="(max-width: 980px) 100vw, 700px"
+          priority
+        />
+        <div className={styles.heroOverlay} />
+        <div className={styles.heroGlow} />
+      </div>
+
+      <div className={styles.heroBody}>
+        <div className={styles.heroTopRow}>
+          <span className={styles.featuredBadge}>Featured</span>
+          <span className={styles.heroTech}>
+            {project.tech.slice(0, 3).join(" • ")}
+          </span>
+        </div>
+
+        <h3 className={styles.heroTitle}>{project.title}</h3>
+        <p className={styles.heroDesc}>{project.description}</p>
+
+        <div className={styles.heroActions}>
+          <a
+            href={project.links.code}
+            className={styles.heroPrimary}
+            target="_blank"
+            rel="noopener noreferrer">
+            View Code
+          </a>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function MiniFeaturedCard({ project }) {
+  return (
+    <article className={styles.miniCard}>
+      <div className={styles.miniThumb}>
+        <Image
+          src={project.imageUrl}
+          alt={project.title}
+          fill
+          className={styles.miniImage}
+          sizes="(max-width: 980px) 100vw, 520px"
+        />
+        <div className={styles.miniOverlay} />
+      </div>
+
+      <div className={styles.miniBody}>
+        <h4 className={styles.miniTitle}>{project.title}</h4>
+        <p className={styles.miniDesc}>{project.description}</p>
+        <a
+          href={project.links.code}
+          className={styles.miniLink}
+          target="_blank"
+          rel="noopener noreferrer">
+          View →
+        </a>
+      </div>
+    </article>
+  );
+}
+
+function ProjectCard({ project }) {
+  return (
+    <article className={styles.card}>
+      <div className={styles.thumb}>
+        <Image
+          src={project.imageUrl}
+          alt={project.title}
+          fill
+          className={styles.image}
+          sizes="(max-width: 768px) 100vw, 520px"
+        />
+      </div>
+
+      <div className={styles.body}>
+        <h4 className={styles.title}>{project.title}</h4>
+        <p className={styles.desc}>{project.description}</p>
+
+        <div className={styles.techRow}>
+          {project.tech.slice(0, 4).map((t) => (
+            <span key={t} className={styles.tag}>
+              {t}
+            </span>
+          ))}
+        </div>
+
+        <div className={styles.actions}>
+          <a
+            href={project.links.code}
+            className={styles.primary}
+            target="_blank"
+            rel="noopener noreferrer">
+            View Code
+          </a>
+        </div>
+      </div>
+    </article>
+  );
+}
