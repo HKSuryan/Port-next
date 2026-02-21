@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import styles from "../styles/Navbar.module.css";
 import HamburgerMenu from "./HamburgerMenu";
-
+//jjjj
 const LINKS = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
